@@ -4,7 +4,7 @@ description = "LSP support for Duso - a scripting language for AI agents and aut
 version = "0.1.0"
 schema_version = 1
 authors = ["Duso Community"]
-repository = "https://github.com/duso-org/zed-duso"
+repository = "https://github.com/duso-org/duso-zed"
 wasm = "target/wasm32-wasip1/debug/zed_duso.wasm"
 
 [language_servers.duso]

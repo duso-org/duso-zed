@@ -23,7 +23,6 @@
 ;; Control flow keywords
 "try" @keyword
 "catch" @keyword
-"throw" @keyword
 "var" @keyword
 "raw" @keyword
 
