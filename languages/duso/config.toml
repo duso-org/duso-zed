@@ -1,0 +1,7 @@
+name = "Duso"
+grammar = "duso"
+path_suffixes = ["du"]
+line_comments = ["//"]
+block_comment_delimiters = [["/*", "*/"]]
+tab_size = 2
+hard_tabs = false

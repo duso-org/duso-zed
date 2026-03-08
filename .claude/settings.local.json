@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(duso:*)",
+      "Read(//Users/dbalmer/Projects/duso-org/tree-sitter-duso/**)",
+      "Bash(npx tree-sitter generate)"
+    ]
+  }
+}

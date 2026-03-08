@@ -1,0 +1,144 @@
+// Example Duso script demonstrating syntax highlighting and features
+// This file showcases the language features supported by the Zed extension
+
+// Comments
+/* Multi-line comment
+   This extension provides syntax highlighting
+   and LSP support for Duso scripts
+*/
+
+// Variables and types
+name = "Duso"
+version = 0.22
+active = true
+numbers = [1, 2, 3, 4, 5]
+config = {timeout = 30, retries = 3}
+
+// String templates
+greeting = "Hello, {{name}}!"
+message = """
+  This is a multi-line string
+  with {{version}} and features
+"""
+
+// Basic control flow
+if active then
+  print("Starting script...")
+elseif version > 0.2 then
+  print("Legacy version")
+else
+  print("Inactive")
+end
+
+// Loops
+for i = 0, 5 do
+  print("Index:", i)
+end
+
+for item in numbers do
+  print("Item:", item)
+end
+
+while true do
+  input_value = input("Enter something: ")
+  if input_value == "quit" then
+    break
+  end
+  print("You said:", input_value)
+end
+
+// Functions
+function calculate(a, b, operation)
+  if operation == "add" then
+    return a + b
+  elseif operation == "multiply" then
+    return a * b
+  else
+    throw("Unknown operation: " + operation)
+  end
+end
+
+result = calculate(5, 3, "add")
+print("5 + 3 =", result)
+
+// Ternary operator
+status = version > 0.2 ? "stable" : "beta"
+print("Status:", status)
+
+// Error handling
+try
+  file_content = load("data.json")
+  data = parse_json(file_content)
+catch error
+  print("Error reading file:", error)
+end
+
+// Built-in functions
+print("Math operations:")
+print("abs(-10) =", abs(-10))
+print("sqrt(16) =", sqrt(16))
+print("max(3, 7) =", max(3, 7))
+
+// Array operations
+items = ["apple", "banana", "cherry"]
+print("First item:", items[0])
+print("Array length:", len(items))
+
+mapped = map(items, function(item)
+  return upper(item)
+end)
+print("Uppercase items:", mapped)
+
+// String operations
+text = "duso language"
+print("Upper:", upper(text))
+print("Contains 'language':", contains(text, "language"))
+print("Substring:", substr(text, 0, 4))
+
+// Parallel execution (advanced)
+results = parallel(
+  function()
+    return "First result"
+  end,
+  function()
+    return "Second result"
+  end,
+  function()
+    return "Third result"
+  end
+)
+print("Parallel results:", results)
+
+// AI Integration (requires Claude API key)
+// Uncomment to use:
+// claude = require("claude")
+// response = claude.prompt("What is Duso?")
+// print("Claude says:", response)
+
+// HTTP requests
+// response = fetch("https://api.example.com/data")
+// if response.status == 200 then
+//   api_data = parse_json(response.body)
+//   print("API Response:", api_data)
+// end
+
+// Module imports
+// math_utils = require("math")
+// result = math_utils.complex_calculation()
+
+// Object construction
+person = {
+  name = "Alice",
+  age = 30,
+  skills = ["Duso", "Go", "Python"]
+}
+
+print("Person:", person.name, "Age:", person.age)
+
+// Datastore (for concurrent access)
+// store = datastore()
+// store.set("key", "value")
+// stored = store.get("key")
+// print("Stored value:", stored)
+
+print("\nScript completed!")

@@ -1,0 +1,50 @@
+{
+  "function": {
+    "prefix": "fn",
+    "body": "function ${1:name}(${2:args})\n  ${3}\nend"
+  },
+  "if": {
+    "prefix": "if",
+    "body": "if ${1:condition} then\n  ${2}\nend"
+  },
+  "if-else": {
+    "prefix": "ifelse",
+    "body": "if ${1:condition} then\n  ${2}\nelse\n  ${3}\nend"
+  },
+  "for": {
+    "prefix": "for",
+    "body": "for ${1:i} = ${2:0}, ${3:10} do\n  ${4}\nend"
+  },
+  "for-in": {
+    "prefix": "forin",
+    "body": "for ${1:item} in ${2:items} do\n  ${3}\nend"
+  },
+  "while": {
+    "prefix": "while",
+    "body": "while ${1:condition} do\n  ${2}\nend"
+  },
+  "try-catch": {
+    "prefix": "try",
+    "body": "try\n  ${1}\ncatch ${2:error}\n  ${3}\nend"
+  },
+  "parallel": {
+    "prefix": "parallel",
+    "body": "parallel(\n  function()\n    ${1}\n  end,\n  function()\n    ${2}\n  end\n)"
+  },
+  "spawn": {
+    "prefix": "spawn",
+    "body": "spawn(\"${1:script.du}\")"
+  },
+  "require": {
+    "prefix": "require",
+    "body": "${1:module} = require(\"${2:module}\")"
+  },
+  "fetch": {
+    "prefix": "fetch",
+    "body": "response = fetch(\"${1:https://api.example.com}\")"
+  },
+  "claude": {
+    "prefix": "claude",
+    "body": "claude = require(\"claude\")\nresult = claude.prompt(\"${1:prompt}\")"
+  }
+}
