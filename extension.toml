@@ -9,7 +9,7 @@ wasm = "target/wasm32-wasip1/debug/zed_duso.wasm"
 
 [grammars.duso]
 repository = "https://github.com/duso-org/duso-tree-sitter"
-rev = "e61e4c9dd781b17b6c4413438b43e7a57122dda3"
+rev = "ea502d1a178be623e5920c5ebaee13f13592446b"
 
 [language_servers.duso]
 name = "Duso Language Server"
