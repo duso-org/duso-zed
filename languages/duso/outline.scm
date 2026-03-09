@@ -1,7 +1,9 @@
-(function_declaration
-  name: (identifier) @name) @item
+(function_declaration (identifier) @name) @item
 
-(if_statement
-  condition: (_) @context) @item
+(if_statement) @item
+
+(while_statement) @item
+
+(for_statement) @item
 
 (try_statement) @item

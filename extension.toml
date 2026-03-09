@@ -7,10 +7,11 @@ authors = ["Duso Community"]
 repository = "https://github.com/duso-org/duso-zed"
 wasm = "target/wasm32-wasip1/debug/zed_duso.wasm"
 
+[grammars.duso]
+repository = "https://github.com/duso-org/duso-tree-sitter"
+rev = "aa912898c87831183e1409d9293947b29de54a7b"
+
 [language_servers.duso]
 name = "Duso Language Server"
 languages = ["Duso"]
 
-[grammars.duso]
-repository = "https://github.com/duso-org/duso-tree-sitter"
-rev = "main"

@@ -1,13 +1,18 @@
 ;; Increase indentation after opening blocks
 (if_statement "then" @indent)
+(elseif_clause "then" @indent)
+(else_clause "else" @indent)
 (while_statement "do" @indent)
 (for_statement "do" @indent)
 (function_declaration "function" @indent)
+(function_literal "function" @indent)
 (try_statement "try" @indent)
-(catch_block "catch" @indent)
+(try_statement "catch" @indent)
 
 ;; Decrease indentation at 'end' keyword
 (if_statement "end" @outdent)
 (while_statement "end" @outdent)
 (for_statement "end" @outdent)
 (function_declaration "end" @outdent)
+(function_literal "end" @outdent)
+(try_statement "end" @outdent)
