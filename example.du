@@ -8,7 +8,7 @@
 */
 
 // Variables and types
-name = "Duso"
+name = "Duso" // inline comment not highlighting as a comment...
 version = 0.22
 active = true
 numbers = [1, 2, 3, 4, 5]
@@ -31,12 +31,12 @@ else
 end
 
 // Loops
-for i = 0, 5 do
-  print("Index:", i)
-end
-
 for item in numbers do
   print("Item:", item)
+end
+
+for i = 0, 5 do
+  print("Index:", i)
 end
 
 while true do
@@ -69,7 +69,7 @@ print("Status:", status)
 try
   file_content = load("data.json")
   data = parse_json(file_content)
-catch error
+catch (error)
   print("Error reading file:", error)
 end
 
@@ -87,6 +87,7 @@ print("Array length:", len(items))
 mapped = map(items, function(item)
   return upper(item)
 end)
+
 print("Uppercase items:", mapped)
 
 // String operations
@@ -109,22 +110,16 @@ results = parallel(
 )
 print("Parallel results:", results)
 
-// AI Integration (requires Claude API key)
-// Uncomment to use:
-// claude = require("claude")
-// response = claude.prompt("What is Duso?")
-// print("Claude says:", response)
-
 // HTTP requests
-// response = fetch("https://api.example.com/data")
-// if response.status == 200 then
-//   api_data = parse_json(response.body)
-//   print("API Response:", api_data)
-// end
+response = fetch("https://api.example.com/data")
+if response.status == 200 then
+  api_data = parse_json(response.body)
+  print("API Response:", api_data)
+end
 
 // Module imports
-// math_utils = require("math")
-// result = math_utils.complex_calculation()
+math_utils = require("math")
+result = math_utils.complex_calculation()
 
 // Object construction
 person = {
@@ -132,13 +127,12 @@ person = {
   age = 30,
   skills = ["Duso", "Go", "Python"]
 }
-
 print("Person:", person.name, "Age:", person.age)
 
 // Datastore (for concurrent access)
-// store = datastore()
-// store.set("key", "value")
-// stored = store.get("key")
-// print("Stored value:", stored)
+store = datastore()
+store.set("key", "value")
+stored = store.get("key")
+print("Stored value:", stored)
 
 print("\nScript completed!")

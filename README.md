@@ -4,26 +4,29 @@ A comprehensive Zed editor extension for the [Duso](https://duso.rocks) programm
 
 ## Features
 
-✨ **Syntax Highlighting** - Full support for Duso language syntax
+### Syntax Highlighting
+- Full support for Duso language syntax
 - Keywords: `if/then/else/elseif/end`, `while`, `for`, `function`, `return`, `try/catch`
 - 70+ built-in functions (parallel, spawn, fetch, datastore, etc.)
 - String templates with `{{ expr }}` syntax
 - Comments: `//` line and `/* */` block comments
 
-🔧 **Language Server Protocol (LSP)** - Real-time language features
+### Language Server Protocol (LSP)
+- Real-time language features
 - Error checking and diagnostics
 - Auto-completion
 - Code navigation
 - Hover information
 - Document symbols and outline
 
-📝 **Code Snippets** - Quick insertion of common patterns
+### Code Snippet
+- Quick insertion of common patterns
 - Functions, loops, conditionals
 - Parallel execution blocks
 - Try/catch error handling
 - Module imports and Claude integration
 
-⚙️ **Smart Editing**
+### Smart Editing
 - Auto-closing brackets
 - Proper indentation for code blocks
 - Bracket matching
@@ -40,12 +43,13 @@ A comprehensive Zed editor extension for the [Duso](https://duso.rocks) programm
 ### From Source
 ```bash
 cd ~/.zed/extensions
-git clone https://github.com/duso-org/zed-duso.git
+git clone https://github.com/duso-org/duso-zed.git
 ```
 
 ## Requirements
 
 - **Duso** must be installed on your system. Get it from:
+  - [Duso Homepage](https://duso.rocks): Download and install binary
   - [Homebrew](https://brew.sh): `brew tap duso-org/homebrew-duso && brew install duso`
   - [GitHub Releases](https://github.com/duso-org/duso/releases)
 
@@ -91,7 +95,6 @@ print("Hello, Duso!")
 | `spawn` | spawn process |
 | `require` | module import |
 | `fetch` | HTTP fetch |
-| `claude` | Claude AI integration |
 
 ## Commands
 
@@ -127,13 +130,12 @@ duso -version
 
 ## Contributing
 
-We'd love your contributions! Please see [CONTRIBUTING.md](../duso/CONTRIBUTING.md) in the main Duso repository.
-
-## License
-
-Apache License 2.0 - See [LICENSE](LICENSE) file for details
+We'd love your contributions!
 
 ## Related Projects
 
 - [Duso Language](https://github.com/duso-org/duso) - The main Duso repository
-- [VSCode Extension](https://github.com/duso-org/duso-vscode) - Duso support for VSCode
+
+## License
+
+© 2026 Ludonode LLC | Licensed under [Apache License 2.0](LICENSE)
