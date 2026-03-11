@@ -10,10 +10,14 @@ impl zed::Extension for DusoExtension {
     fn language_server_command(
         &mut self,
         _language_server_id: &zed::LanguageServerId,
-        _worktree: &zed::Worktree,
+        worktree: &zed::Worktree,
     ) -> Result<zed::Command, String> {
+        let duso_binary = worktree
+            .which("duso")
+            .ok_or_else(|| "duso binary not found in PATH".to_string())?;
+
         Ok(zed::Command {
-            command: "/usr/local/bin/duso".to_string(),
+            command: duso_binary,
             args: vec!["-lsp".to_string()],
             env: Default::default(),
         })
